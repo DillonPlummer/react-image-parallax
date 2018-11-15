@@ -5,10 +5,26 @@ const NoOverFlow = ({ children }) =>
     {children}
   </div>;
 
+const TextOverlay = ({text}) =>
+  <div style={{
+              position: absolute;
+              top: 50%;
+              width: 100%;
+              text-align: center;
+              color: #2A2A2A;
+              font-size: 27px;
+              letter-spacing: 8px;
+              text-transform: uppercase;
+             }}>
+    {text}
+  </div>
+              
+              
 export default class ImageParallax extends Component {
   static propTypes = {
     children: PropTypes.func.isRequired,
-    scale: PropTypes.number.isRequired
+    scale: PropTypes.number.isRequired,
+    text: PropTypes.string
   };
 
   constructor(props) {
